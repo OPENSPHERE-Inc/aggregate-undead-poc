@@ -53,7 +53,7 @@ Discord や Slack 等のチャットツールを使って関係者間で回す�
 ### 1) リポジトリの取得
 
 ```shell
-git clone --recursive git@github.com:OPENSPHERE-Inc/aggregate-undead-poc.git
+git clone --recursive https://github.com/OPENSPHERE-Inc/aggregate-undead-poc.git
 cd aggregate-undead-poc
 ```
 
