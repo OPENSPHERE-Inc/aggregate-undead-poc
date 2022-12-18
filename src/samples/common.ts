@@ -32,7 +32,9 @@ export const cosign = async () => {
             }
         )).privateKey;
         if (privateKey) {
-            cosignerAccounts.push(Account.createFromPrivateKey(privateKey, networkType));
+            const account = Account.createFromPrivateKey(privateKey, networkType);
+            cosignerAccounts.push(account);
+            Logger.info(`No.${cosignerAccounts.length} Cosigner's address is ${account.address.plain()}`);
         }
     } while (privateKey);
 

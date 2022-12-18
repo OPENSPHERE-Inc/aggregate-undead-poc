@@ -203,7 +203,7 @@ const undeadTx = AggregateUndeadTransaction.createFromJSON(JSON.parse(fs.readFil
 ### 5) アンデッド化された署名済トランザクションからアナウンス可能な署名済トランザクション取り出し
 
 ```typescript
-const { signedTx, signature } = await necromancyService.pickTx(
+const { signedTx, signature } = await necromancyService.pickAndCastTx(
     undeadTx, 
     cosignerAccounts
 );

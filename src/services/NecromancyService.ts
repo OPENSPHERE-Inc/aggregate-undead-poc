@@ -187,7 +187,7 @@ export class NecromancyService {
     }
 
     // cosigners are optional.
-    public async pickTx(
+    public async pickAndCastTx(
         undeadTx: AggregateUndeadTransaction,
         cosignerAccounts: Account[] = [],
         timeShiftSecs: number = 0,

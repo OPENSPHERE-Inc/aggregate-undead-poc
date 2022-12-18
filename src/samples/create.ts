@@ -50,10 +50,11 @@ const main = async () => {
         }
     ]));
 
-    const cosignerAccounts = await cosign();
     const { networkType } = await symbolService.getNetwork();
     const senderAccount = Account.createFromPrivateKey(inputData.signerPrivateKey, networkType);
+    Logger.info(`Signer's address is ${senderAccount.address.plain()}`);
     const recipientAddress = Address.createFromRawAddress(inputData.recipientAddress);
+    const cosignerAccounts = await cosign();
 
     const transferTx = await symbolService.createTransferTx(
         senderAccount.publicAccount,

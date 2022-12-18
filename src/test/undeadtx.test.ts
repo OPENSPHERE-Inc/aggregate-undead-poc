@@ -83,7 +83,7 @@ describe("AggregateUndeadTransaction", () => {
     }, 600000);
 
     it("Pick and cast", async () => {
-        const { signedTx, signature } = await necromancyService.pickTx(undeadTx);
+        const { signedTx, signature } = await necromancyService.pickAndCastTx(undeadTx);
 
         expect(signedTx).toBeDefined();
         expect(signature).toBeDefined();
@@ -110,7 +110,7 @@ describe("AggregateUndeadTransaction", () => {
             4.5 * 60 * 60
         );
 
-        const { signedTx, signature } = await necromancyService.pickTx(undeadTx, [ targetAccount ]);
+        const { signedTx, signature } = await necromancyService.pickAndCastTx(undeadTx, [ targetAccount ]);
 
         expect(signedTx).toBeDefined();
         expect(signature).toBeDefined();
@@ -127,7 +127,7 @@ describe("AggregateUndeadTransaction", () => {
         undeadTx = necromancyService.cosignTx(undeadTx, [ targetAccount ]);
 
         // Backward 1 hour
-        const { signedTx, signature } = await necromancyService.pickTx(
+        const { signedTx, signature } = await necromancyService.pickAndCastTx(
             undeadTx,
             [],
             60 * 60
@@ -157,7 +157,7 @@ describe("AggregateUndeadTransaction", () => {
         );
 
         // Forward 10 hours
-        const { signedTx, signature } = await necromancyService.pickTx(undeadTx, [],-10 * 60 * 60);
+        const { signedTx, signature } = await necromancyService.pickAndCastTx(undeadTx, [],-10 * 60 * 60);
 
         expect(signedTx).toBeDefined();
         // Expect picking 3rd signature
@@ -184,7 +184,7 @@ describe("AggregateUndeadTransaction", () => {
             4 * 24 * 60 * 60 + 1
         );
 
-        const { signedTx, signature } = await necromancyService.pickTx(undeadTx, [ targetAccount ]);
+        const { signedTx, signature } = await necromancyService.pickAndCastTx(undeadTx, [ targetAccount ]);
 
         expect(signedTx).toBeDefined();
         expect(signature).toBeDefined();
