@@ -1,2 +1,2 @@
-export * from "./NecromancyService";
+export * from "./necromancy";
 export * from "./symbol";
