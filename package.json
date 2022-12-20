@@ -48,9 +48,6 @@
   "scripts": {
     "clean": "rimraf dist",
     "test": "jest",
-    "pull-submod": "cd symbol-service && git pull origin master",
-    "build-submod": "cd symbol-service && yarn && yarn build",
-    "upgrade-submod": "yarn pull-submod && yarn build-submod && yarn upgrade symbol-service",
     "build": "yarn clean && tsc",
     "undead-create": "node dist/samples/create.js",
     "undead-cast": "node dist/samples/cast.js"
