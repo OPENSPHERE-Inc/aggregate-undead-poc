@@ -1,7 +1,6 @@
-import {Logger, SymbolService} from "symbol-service";
 import {cosign, necromancyService, symbolService} from "./common";
 import * as fs from "fs";
-import {AggregateUndeadTransaction} from "../services";
+import {AggregateUndeadTransaction, Logger, SymbolService} from "../services";
 import prompts from "prompts";
 import {PublicAccount} from "symbol-sdk";
 

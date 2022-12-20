@@ -1,8 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config({ path: './.env.test' });
 
-import {AggregateUndeadTransaction, NecromancyService} from "../services";
-import {SymbolService, SymbolTest} from "symbol-service";
+import {AggregateUndeadTransaction, NecromancyService, SymbolService, SymbolTest} from "../services";
 import {
     Account,
     CosignatureTransaction,

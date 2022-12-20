@@ -1,7 +1,6 @@
 import dotenv from "dotenv";
-import {Logger, SymbolService} from "symbol-service";
 import assert from "assert";
-import {NecromancyService} from "../services";
+import {NecromancyService, Logger, SymbolService} from "../services";
 import prompts from "prompts";
 import {Account} from "symbol-sdk";
 

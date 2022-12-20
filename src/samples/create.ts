@@ -1,4 +1,4 @@
-import {Logger, SymbolService} from "symbol-service";
+import {Logger, SymbolService} from "../services";
 import prompts from "prompts";
 import {symbolService, necromancyService, cosign} from "./common";
 import {Account, Address, UInt64} from "symbol-sdk";

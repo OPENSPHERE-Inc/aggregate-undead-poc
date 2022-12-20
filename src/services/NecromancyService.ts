@@ -11,7 +11,7 @@ import {
     UInt64
 } from "symbol-sdk";
 
-import {SymbolService} from "symbol-service";
+import {SymbolService} from "./symbol";
 import assert from "assert";
 import { v4 as uuidv4 } from "uuid";
 
