@@ -41,14 +41,17 @@
       ]
     },
     "testMatch": [
-      "**/test/**/*.test.ts"
+      "./src/test/**/*.test.ts"
+    ],
+    "testPathIgnorePatterns": [
+      "symbol-service"
     ],
     "testEnvironment": "node"
   },
   "scripts": {
     "clean": "rimraf dist",
     "test": "jest",
-    "pull-submod": "cd symbol-service && git pull",
+    "pull-submod": "cd symbol-service && git pull origin master",
     "build-submod": "cd symbol-service && yarn && yarn build",
     "upgrade-submod": "yarn pull-submod && yarn build-submod && yarn upgrade symbol-service",
     "build": "yarn clean && tsc",
